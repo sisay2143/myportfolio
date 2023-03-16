@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+	font-size: 20px; 
+	font-family: 'Montserrat', sans-serif;
+	
+}
+.header-wrapper{
+    background-color: black;
+    color: white;
+    font-weight: 200;
+    font-size: 0.75em;
+    /* position: absolute; */
+}
+img {
+ max-width: 100%;
+}
+.header-wrapper ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+}
+.internal{
+    width: 980px;
+    padding: 0 0px;
+    margin: 0 auto;
+
+}
+.header-wrapper .internal-links ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.header-wrapper .internal .internal-links ul li{
+    opacity: 0.7 ;
+    padding: 14px 0 8px;
+    height: 29px;
+    display: flex;
+    font-family: sans-serif;
+    font-size: medium;
+
+}
+.one{
+    background: #fafafa;
+}
+.header-wrapper .internal .internal-links ul li:hover{
+    opacity: 1;
+    color: rgb(255, 255, 255);
+}
+.four , .five , .six{
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+.four1, .fiveth, .sixth, .five2, .six2{
+    padding-right: 5px;
+}
+.four2, .five2, .six2{
+    padding-left: 5px;
+}
+
+.logo-link .search-link .cart-link{
+    width: 1px;
+    height: 3px;  
+}
+.logo-link img ,.cart-link img ,.search-link img{
+    height: 20px;
+}
+.header-wrapper .internal-links ul li.logo-link{
+    padding: 12px 0 10px;
+}
+.header-wrapper .internal-links ul li.search-link{
+    padding: 12px 0 10px;
+}
+.header-wrapper .internal-links ul li.cart-link{
+    padding: 12px 0 10px;   
+}
+.one .wrapper1 a{
+    text-decoration: none;
+}
+.one .wrapper1 a:hover{
+    text-decoration: underline;
+}
+.upper-text{
+  border-bottom: 1px solid rgb(10, 1, 1);
+  color: gray;
+  padding: 17px 30px 20px;
+}
+.footer-wrapper{
+    background-color: #fff;
+    color: black;
+    font-size: .65em;
+    padding: 17px 80px 20px;
+    background: #fafafa;
+}
+.upper-text a{
+    text-decoration: none;
+    color: black;
+}
+.upper-text a:hover{
+    text-decoration: underline;
+}
+.footer-links-wrapper{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-around;
+    padding-top: 20px;
+   
+}
+.footer-links-wrapper a{
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+}
+.footer-links-wrapper a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+.footer-wrapper ul{
+    list-style: none;
+    padding-bottom: 20px;
+}
+.footer-wrapper ul li{
+    padding: 4px 0;
+    font-size: 0.9;
+}
+.images1{
+    background-image: url(../images/home/mac-laptop.jpg);
+    width: 668px;
+    height: 450px;
+    
+}
+.images2{
+   width: 100%;
+   height: 500px;
+}
+.one{
+    width: 700px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.one .wrapper1{
+    padding: 0 10px;
+   text-align: center;
+}
+.model{
+    font-size: small;
+    padding: 20px 0 0;
+}
+.title{
+    font-size: 35px;
+}
+.discription{
+    font-size: 20px;
+}
+.my-apple-warapper{
+    border-bottom: 1px solid #d2d2d7;
+	padding-bottom: 10px;
+	margin-bottom: 10px; 
+}
+.footer-country{
+    display: flex;
+    
+}
+.two{
+    background-image: url("../images/home/iphone11-pro-bg.jpg");
+	height: 580px;
+	background-position: center;
+	background-repeat: no-repeat;
+  background-size: cover;
+	text-align: center;
+	padding: 65px 20px;
+	color: #fff;
+}
+.title{
+    font-weight: 600;
+	font-size: 56px;	
+}
+.discription{
+    font-size: 26px;
+	padding: 10px 0;
+}
+.price{
+    color: #86868b; 
+	font-size: 0.95em;
+    padding: 5px 0;
+}
+.links{
+    font-size: 5px 0;
+}
+.links ul{
+    display: inline-flex;
+}
+.links ul li{
+    list-style-type: none;
+    padding: 0 5px;
+    color: blue;
+    font-size: 20px;
+}
+.links ul li a{
+   text-decoration: none;
+}
+.links ul li a:hover{
+    opacity: .7;
+}
+.three{
+    background-image: url(../images/home/iphone11-bg.jpg);
+    height: 580px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 65px 20px;
+}
+.footer-links ul li{
+    display: inline-block;
+    border-right: 1px solid #ccc;
+}
+.footer-links ul li a{
+    text-decoration: none;
+	color: #515154;
+}
+.footer-links ul li a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+.copyright-wrapper{
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 1px solid #d2d2d7; */
+	padding-bottom: 10px;
+	margin-bottom: 10px; 
+}
