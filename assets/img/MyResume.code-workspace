@@ -1,12 +1,15 @@
 {
   "folders": [
-	{
-		"path": "../../../../../Downloads/MyResume"
-	},
-	{
-		"path": "../.."
-	}
-],
+    {
+      "path": "../../../../../Downloads/MyResume"
+    },
+    {
+      "path": "../.."
+    },
+    {
+      "path": "../../../../Evangadi/javas"
+    }
+  ],
   "settings": {
     "liveServer.settings.multiRootWorkspaceName": "MyResume"
   }
