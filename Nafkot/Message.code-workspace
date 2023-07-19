@@ -1,0 +1,25 @@
+{
+  "folders": [
+	{
+		"path": "../__Cs courses/Java/Message"
+	},
+	{
+		"path": "../__Cs courses/Java/LabCRUDOperations"
+	},
+	{
+		"path": "C:/Users/windows 10/Desktop/School Management system in java"
+	},
+	{
+		"path": "C:/Users/windows 10/Desktop/chatting-application-master/Chatting Application"
+	},
+	{
+		"path": "../MERN/Evangadi/phase3/node"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Chatting Application"
+  }
+}
