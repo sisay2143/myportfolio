@@ -590,7 +590,7 @@ section {
 --------------------------------------------------------------*/
 #portfolio {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   /* background: url("../img/portfolio/desktop_unsplash.jpg") top right no-repeat; */
   background-size: cover;
   position: relative;
