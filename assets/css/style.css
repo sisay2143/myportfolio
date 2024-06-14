@@ -289,11 +289,30 @@ h6 {
   position: relative;
 }
 
-@media (min-width: 992px) {
+
+@media (max-width: 992px) {
+  /* Use a different image for smaller devices */
+  #hero {
+    background-image: url("../img/mine.jpg");
+    background-position: center;
+  }
+  
+  #hero h1 {
+    color: #000;
+  }
+  
+  #hero .social-links a {
+    color: #000;
+  }
+}
+
+
+/* @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
   }
-}
+
+} */
 
 #hero:before {
   content: "";
@@ -350,6 +369,12 @@ h6 {
   #hero h1 {
     font-size: 32px;
     line-height: 36px;
+    color: #000;
+
+  }
+ 
+  #hero .social-links a {
+    color: #000;
   }
 
   #hero p {
@@ -958,6 +983,47 @@ section {
 .services .iconbox-teal:hover .icon path {
   fill: #11dbcf;
 }
+#certification {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  padding: 8px 0; /* Adjust padding as needed */
+}
+
+.port_wrapper_s {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px; /* Negative margin to counteract padding on portfolio-item */
+}
+
+.port_wrapper_s .portfolio-item {
+  position: relative;
+  padding: 15px; /* Padding around each item */
+  transition: all 0.3s ease;
+  flex: 0 0 calc(33.3333% - 30px); /* Adjust item width for 3 items per row */
+  max-width: calc(33.3333% - 30px); /* Adjust item max-width for responsiveness */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.port_wrapper_s .portfolio-item .portfolio-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.port_wrapper_s .portfolio-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .port_wrapper_s .portfolio-item {
+    width: 100%; /* Full width on mobile and smaller screens */
+    flex: 0 0 100%; /* Full width on mobile and smaller screens */
+    max-width: 100%; /* Full width on mobile and smaller screens */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials
