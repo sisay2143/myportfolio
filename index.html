@@ -108,7 +108,8 @@
         </h2>
 
         <div class="social-links">
-          <a href="#" class="telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://t.me/sisay_bekele" class="telegram"><i class="bx bxl-telegram"></i></a>
+
           <a href="https://www.facebook.com/man.ronaldo.18" class="facebook"
             ><i class="bx bxl-facebook"></i
           ></a>
@@ -787,6 +788,12 @@
                             
                               </div>
                             </div>
+                            <!-- <div class="port_wrapper_s row"> -->
+                              <div class="col-lg-4 col-md-6 portfolio-item filter-web" id="videoTrigger">
+                                <div class="portfolio-wrap">
+                                  <img src="assets/img/final_app_.png" class="img-fluid" alt="final project flutter app" />
+                                </div>
+                              <!-- </div> -->
                        
           </div>
 
@@ -805,6 +812,62 @@
           </div>
         </div>
       </section>
+
+      <!-- <div id="videoModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <video controls id="demoVideo" width="100%">
+            <source src="assets/model_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div> -->
+      <div id="videoModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <video controls id="demoVideo" width="100%">
+            <source src="assets/model_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <script>
+        // Get the modal
+        var modal = document.getElementById("videoModal");
+      
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+      
+        // Get the div that will trigger the modal
+        var triggerDiv = document.getElementById("videoTrigger");
+      
+        // Get the video element
+        var video = document.getElementById("demoVideo");
+      
+        // When the user clicks the div, open the modal and play the video
+        triggerDiv.onclick = function() {
+          modal.style.display = "block";
+          video.play();
+        }
+      
+        // When the user clicks on <span> (x), close the modal and pause the video
+        span.onclick = function() {
+          modal.style.display = "none";
+          video.pause();
+          video.currentTime = 0; // Reset video to start
+        }
+      
+        // When the user clicks anywhere outside of the modal, close it and pause the video
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            video.pause();
+            video.currentTime = 0; // Reset video to start
+          }
+        }
+      </script>
+      
       <!-- End Portfolio Section -->
 
       
@@ -816,6 +879,13 @@
           </div>
       
           <div class="cert_wrapper row">
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img src="assets/img/huawe.jpeg" class="img-fluid" alt="huawe certification" />
+              </div>
+            </div>
+      
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
                 <img src="assets/img/certificate-Become-A-Certified-Web-Developer-From-Scratch.jfif" class="img-fluid" alt="eduonix certification" />
@@ -828,11 +898,11 @@
               </div>
             </div>
       
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
                 <img src="assets/img/huawe.jpeg" class="img-fluid" alt="huawe certification" />
               </div>
-            </div>
+            </div> -->
       
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
@@ -1119,7 +1189,8 @@ frameborder="0"
           Below there are some my social media accounts feel free to contact
         </p>
         <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://t.me/sisay_bekele" class="telegram"><i class="bx bxl-telegram"></i></a>
+          <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
           <a href="https://www.facebook.com/man.ronaldo.18" class="facebook"
             ><i class="bx bxl-facebook"></i
           ></a>
