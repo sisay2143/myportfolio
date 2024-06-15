@@ -624,7 +624,9 @@ section {
 }
 .port_wrapper {
   display: flex;
-  /* justify-content: space-around; */
+  border-radius: 20px;
+  /* padding: 20px; */
+  /* justify-content: space-between; */
 }
 .first {
   padding-right: 20px;
@@ -633,6 +635,8 @@ section {
 
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .portfolio #portfolio-flters {
