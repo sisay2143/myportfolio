@@ -332,11 +332,14 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: #f2f5f9;
+  margin-left: 70px;
+
 }
 
 #hero h2 {
   color: #0c0d0d;
   margin: 15px 0 0 0;
+  margin-left: 70px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
@@ -348,6 +351,8 @@ h6 {
 
 #hero .social-links {
   margin-top: 30px;
+  margin-left: 70px;
+
 }
 
 #hero .social-links a {
