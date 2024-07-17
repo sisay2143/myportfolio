@@ -136,10 +136,11 @@
           <div class="section-title">
             <h2>About</h2>
             <p>
-              I have graduated with a bachelor's degree in computer science, 
-              gaining deep knowledge in frontend development, databases, and other core technologies. 
-              I am passionate about the tech industry and regularly attend 
-              conferences to keep up with the latest trends and technologies.
+              I am a Computer Science graduate with a passion for leveraging technology to solve problems. I have
+              strong academic foundations, effective communication, and leadership skills. I stay updated on industry
+              trends and specialize in React development. I aim to merge theory with hands-on experience to drive
+              impactful technological solutions.
+              
             </p>
           </div>
 
@@ -213,7 +214,7 @@
           <div class="section-title">
             <h2>Facts</h2>
             <p>
-              Now I'am junior website developer and in the coming years I will
+               I'am junior website developer and in the coming years I will
               become a fullstack/MERN developer especially by working
               hard on backend development.
             </p>
@@ -1114,65 +1115,29 @@
             </div>
 
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form
-                action="process_form.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Your Name"
-                      required
-                    />
+              <form action="process_form.php" method="post" role="form" class="php-email-form">
+                  <div class="row">
+                      <div class="col-md-6 form-group">
+                          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                      </div>
+                      <div class="col-md-6 form-group mt-3 mt-md-0">
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                      </div>
                   </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
-                      required
-                    />
+                  <div class="form-group mt-3">
+                      <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                   </div>
-                </div>
-                <!-- <div class="form-group mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </div> -->
-                <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="5"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
+                  <div class="my-3">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">Your message has been sent. Thank you!</div>
                   </div>
-                </div>
-                <div class="text-center">
-                  <button type="submit">Send Message</button>
-                </div>
+                  <div class="text-center">
+                      <button type="submit">Send Message</button>
+                  </div>
               </form>
-            </div>
+          </div>
+          
           </div>
         </div>
       </section>
@@ -1185,6 +1150,29 @@ frameborder="0"
 ></iframe> -->
 
 <script>
+  document.querySelector('.php-email-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let formData = new FormData(this);
+
+    fetch(this.action, {
+        method: this.method,
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            document.querySelector('.sent-message').style.display = 'block';
+        } else {
+            document.querySelector('.error-message').innerText = data.message;
+            document.querySelector('.error-message').style.display = 'block';
+        }
+    })
+    .catch(error => {
+        document.querySelector('.error-message').innerText = 'An error occurred. Please try again.';
+        document.querySelector('.error-message').style.display = 'block';
+    });
+});
+
   window.chatbaseConfig = {
     chatbotId: "NWUd_UVF22aPw3Be9jfRo",
   }

@@ -1,9 +1,16 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize input data to prevent XSS attacks
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    // Validate and sanitize input data to prevent XSS attacks and email injection
+    $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $message = filter_var(trim($_POST['message']), FILTER_SANITIZE_STRING);
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        echo json_encode(array('status' => 'error', 'message' => 'Invalid email address.'));
+        exit;
+    }
 
     // Set up the email parameters
     $to = "sisaybekele735@gmail.com";
@@ -15,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Set headers
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     // Attempt to send email
     if (mail($to, $subject, $body, $headers)) {
