@@ -178,7 +178,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                   <ul>
                     <!-- <li>
                       <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
@@ -938,9 +938,23 @@
                 <img src="assets/img/dereja.jpg" class="img-fluid" alt="dereja certification" />
               </div>
             </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img src="assets\img\portfolio\20240717_103358.jpg" class="img-fluid" alt="dereja certification" />
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img src="assets\img\portfolio\20240717_103421.jpg" class="img-fluid" alt="dereja certification" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <div id="image-overlay">
+        <span class="close-btn">&times;</span>
+        <img src="" alt="Full view">
+    </div>
       
       
         <!-- END certification Section -->
@@ -1150,6 +1164,38 @@ frameborder="0"
 ></iframe> -->
 
 <script>
+ // Get the overlay image and close button
+const overlay = document.getElementById('image-overlay');
+const overlayImage = overlay.querySelector('img');
+const closeButton = overlay.querySelector('.close-btn');
+
+// Function to open the overlay
+function openOverlay(src) {
+  overlayImage.src = src;
+  overlay.style.display = 'flex';
+}
+
+// Function to close the overlay
+function closeOverlay() {
+  overlay.style.display = 'none';
+}
+
+// Add event listener to close button
+closeButton.addEventListener('click', closeOverlay);
+
+// Add click event to all portfolio images
+const portfolioImages = document.querySelectorAll('.portfolio-wrap img');
+portfolioImages.forEach(img => {
+  img.addEventListener('click', () => openOverlay(img.src));
+});
+
+// Add event listener to overlay to close it when clicking outside the image
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) {
+    closeOverlay();
+  }
+});
+
   document.querySelector('.php-email-form').addEventListener('submit', function(event) {
     event.preventDefault();
     let formData = new FormData(this);
