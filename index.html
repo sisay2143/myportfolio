@@ -34,6 +34,7 @@
       rel="stylesheet"
     />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
@@ -909,20 +910,25 @@
       
           <div class="cert_wrapper row">
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web ">
+              <div class="">
                 <img src="assets/img/huawe.jpeg" class="img-fluid" alt="huawe certification" />
               </div>
             </div>
+            <!-- Modal Structure -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
       
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
+              <div class="">
                 <img src="assets/img/certificate-Become-A-Certified-Web-Developer-From-Scratch.jfif" class="img-fluid" alt="eduonix certification" />
               </div>
             </div>
       
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
+              <div class="">
                 <img src="assets/img/luster.jpg" class="img-fluid" alt="nodejs certification" />
               </div>
             </div>
@@ -934,17 +940,17 @@
             </div> -->
       
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
+              <div class="">
                 <img src="assets/img/dereja.jpg" class="img-fluid" alt="dereja certification" />
               </div>
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
+              <div class="">
                 <img src="assets\img\portfolio\20240717_103358.jpg" class="img-fluid" alt="dereja certification" />
               </div>
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
+              <div class="">
                 <img src="assets\img\portfolio\20240717_103421.jpg" class="img-fluid" alt="dereja certification" />
               </div>
             </div>
@@ -955,7 +961,28 @@
         <span class="close-btn">&times;</span>
         <img src="" alt="Full view">
     </div>
-      
+      <script>
+        // Get the modal
+var modal = document.getElementById("imageModal");
+
+// Get the image and insert it inside the modal
+var img = document.getElementById("huawe-certification");
+var modalImg = document.getElementById("modalImage");
+
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+        </script>
       
         <!-- END certification Section -->
       <!-- ======= Testimonials Section ======= -->
