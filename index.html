@@ -917,32 +917,28 @@
           </div>
       
           <div class="cert_wrapper row">
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web ">
-              <div class="">
-               <a href="assets/img/huawe.jpeg"> <img src="assets/img/huawe.jpeg" class="img-fluid" alt="huawe certification" />
-               </a>
-                <div style="text-align: center; background-color: rgb(99, 84, 84); color: white;" class="">HUAWEI</div>
-              
-              </div>
+            <!-- Example for the first image -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div>
+                    <a href="#certification" onclick="openModal('assets/img/huawe.jpeg')">
+                        <img src="assets/img/huawe.jpeg" class="img-fluid" alt="huawe certification" />
+                    </a>
+                    <div style="text-align: center; background-color: rgb(99, 84, 84); color: white;">HUAWEI</div>
+                </div>
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item filter-web ">
               <div class="">
-                <a href="assets/img/portfolio/73-alx-aice-ai-career-essentials-certificate-sisay-bekele.png">
+                <a href="#certification" onclick="openModal('assets/img/portfolio/73-alx-aice-ai-career-essentials-certificate-sisay-bekele.png')">
                   <img src="assets/img/portfolio/73-alx-aice-ai-career-essentials-certificate-sisay-bekele.png" class="img-fluid" alt="alx certification" />
                 </a>
                 <div style="text-align: center; background-color: rgb(99, 84, 84); color: white;" class="">ALX AICE</div>
               </div>
             </div>
-            <!-- Modal Structure -->
-<!-- <div id="imageModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div> -->
+          
       
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="">
-                <a href="assets/img/certificate-Become-A-Certified-Web-Developer-From-Scratch.jfif">
+                <a href="#certification" onclick="openModal('assets/img/certificate-Become-A-Certified-Web-Developer-From-Scratch.jfif')">
                   <img src="assets/img/certificate-Become-A-Certified-Web-Developer-From-Scratch.jfif" class="img-fluid" alt="eduonix certification" />
                 </a>
                 <div style="text-align: center; background-color: rgb(99, 84, 84); color: white;" class="">WEB DEVELOPMENT</div>
@@ -964,7 +960,7 @@
       
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="">
-                <a href="assets/img/dereja.jpg">
+                <a href="#certification" onclick="openModal('assets/img/dereja.jpg')">
                   <img src="assets/img/dereja.jpg" class="img-fluid" alt="dereja certification" />
                 </a>
                 <div style="text-align: center; background-color: rgb(99, 84, 84); color: white;" class="">Employabilty skills</div>
@@ -973,7 +969,7 @@
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="">
-                <a href="assets\img\portfolio\20240717_103358.jpg">
+                <a href="#certification" onclick="openModal('assets/img/portfolio/20240717_103358.jpg')">
                   <img src="assets\img\portfolio\20240717_103358.jpg" class="img-fluid" alt="dereja certification" />
                 </a>
                 <div style="text-align: center; background-color: rgb(99, 84, 84); color: white;" class="">Job Readiness</div>
@@ -981,19 +977,43 @@
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="">
-                <a href="assets\img\portfolio\20240717_103421.jpg">
+                <a href="#certification" onclick="openModal('assets/img/portfolio/20240717_103421.jpg')">
                   <img src="assets\img\portfolio\20240717_103421.jpg" class="img-fluid" alt="dereja certification" />
                 </a>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
+            <!-- Repeat for other images -->
+            <!-- ... -->
+        </div>
+        
+        <!-- Modal Structure -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+        
         </div>
       </section>
       <!-- <div id="image-overlay">
         <span class="close-btn">&times;</span>
         <img src="" alt="Full view">
     </div> -->
-      <script>
+    <script>
+      // Function to open the modal
+      function openModal(imgSrc) {
+          document.getElementById('imageModal').style.display = 'block';
+          document.getElementById('modalImage').src = imgSrc;
+      }
+      
+      // Function to close the modal
+      function closeModal() {
+          document.getElementById('imageModal').style.display = 'none';
+      }
+      </script>
+      
+      <!-- <script>
         // Get the modal
 var modal = document.getElementById("imageModal");
 
@@ -1014,7 +1034,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-        </script>
+        </script> -->
       
         <!-- END certification Section -->
       <!-- ======= Testimonials Section ======= -->
