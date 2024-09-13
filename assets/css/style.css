@@ -1406,7 +1406,7 @@ section {
 .portfolio-wrap:hover .portfolio-title {
   transform: translateY(0);
 } */
-
+  
 /* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
@@ -1455,3 +1455,7 @@ section {
     padding: 10px;
 }
 
+.instagram-icon {
+  color: red;
+  
+}
