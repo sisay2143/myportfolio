@@ -267,3 +267,35 @@
   new PureCounter();
 
 })()
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("certification-modal");
+  const modalImage = document.getElementById("modal-image");
+  const closeModal = document.getElementById("close-modal");
+
+  // Open modal on image click
+  document.querySelectorAll(".certification-image").forEach((img) => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImage.src = img.src;
+    });
+  });
+
+  // Close modal on close button click
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close modal on pressing the Escape key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      modal.style.display = "none";
+    }
+  });
+
+  // Prevent page scrolling while modal is open
+  modal.addEventListener("wheel", (e) => {
+    e.stopPropagation();
+  });
+});
